@@ -32,6 +32,10 @@ figure {
   font-family: var(--main-font, Raleway), sans-serif;
 }
 
+.header {
+  padding-top: 10vw;
+}
+
 .heading {
   font-family: var(--accent-font, 'STIX Two Text'), serif;
   line-height: 90%;
@@ -41,5 +45,17 @@ figure {
 }
 
 .content-section {
-  padding: 0 5vi;
+  padding-left: 5vi;
+  padding-right: 5vi;
+}
+
+.header__title {
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  margin-bottom: 40px;
+}
+
+.content__title {
+  font-size: 30px;
+  margin-bottom: 2.5vw;
+  margin-top: 7vw;
 }
