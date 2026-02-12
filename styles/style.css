@@ -32,6 +32,10 @@ figure {
   font-family: var(--main-font, Raleway), sans-serif;
 }
 
+.header {
+  padding-top: 10vw;
+}
+
 .heading {
   font-family: var(--accent-font, 'STIX Two Text'), serif;
   line-height: 90%;
@@ -41,5 +45,133 @@ figure {
 }
 
 .content-section {
-  padding: 0 5vi;
+  padding-left: 5vi;
+  padding-right: 5vi;
+}
+
+.header__title {
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  margin-bottom: 40px;
+}
+
+.content__title {
+  font-size: 30px;
+  margin-bottom: 2.5vw;
+  margin-top: 6.5vw;
+}
+
+.content__text-block {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 122%;
+  letter-spacing: 0;
+}
+
+.content__text-block .content__paragraph:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+.content__text-block_type_first-lettered
+  .content__paragraph:first-child::first-letter {
+  display: inline-block;
+  background-color: var(--accent-color);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 30%;
+  padding: 0 4px;
+  margin-right: 5px;
+}
+
+.content__link {
+  color: inherit;
+  outline-offset: 1px;
+}
+
+.content__blockquote {
+  width: 75%;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 200%;
+  margin: 0 auto 1.5em;
+}
+
+.content__list {
+  list-style: none;
+  padding: 0;
+}
+
+.content__list-element {
+  position: relative;
+  padding-left: 40px;
+}
+
+.content__list-element:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.content__list-element::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-image: url(../images/marker-light.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 15px;
+  top: 3px;
+}
+
+.content__figure {
+  width: calc(100% + 10vi);
+  margin: 7% auto;
+  position: relative;
+  right: 5vi;
+}
+
+.content__picture {
+  width: 100%;
+}
+
+.content__picture-caption {
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid var(--text-color);
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.content__card {
+  aspect-ratio: 4 / 3;
+  margin: 7% auto;
+  border: 1px solid var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__card-title {
+  font-size: 60px;
+}
+
+.content__card-subtitle {
+  font-size: 18px;
+}
+
+.colored-text {
+  position: relative;
+  display: inline-block;
+}
+
+.colored-text::after {
+  content: '';
+  background-color: var(--accent-color);
+  height: 0.5ch;
+  width: calc(100% + 8px);
+  position: absolute;
+  right: -4px;
+  bottom: 0.3ch;
+  z-index: -1;
 }
