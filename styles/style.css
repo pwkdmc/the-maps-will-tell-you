@@ -72,13 +72,14 @@ figure {
 }
 
 .content__text-block_type_first-lettered
-  .content__paragraph:first-child:first-letter {
+  .content__paragraph:first-child::first-letter {
   display: inline-block;
+  background-color: var(--accent-color);
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 30%;
-  padding: 0 1px;
-  margin-right: 8px;
+  padding: 0 4px;
+  margin-right: 5px;
 }
 
 .content__link {
@@ -119,4 +120,24 @@ figure {
   position: absolute;
   left: 15px;
   top: 3px;
+}
+
+.content__figure {
+  width: calc(100% + 10vi);
+  margin: 7% auto;
+  position: relative;
+  right: 5vi;
+}
+
+.content__picture {
+  width: 100%;
+}
+
+.content__picture-caption {
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid var(--text-color);
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
 }
