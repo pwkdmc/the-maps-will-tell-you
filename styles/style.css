@@ -1,6 +1,7 @@
 :root {
   --bg-color: #f3efec;
   --text-color: #312a4e;
+  --text-color-transparent: #312a4e80;
   --accent-color: #ffab6b;
   --main-font: Raleway;
   --accent-font: 'STIX Two Text';
@@ -85,6 +86,14 @@ figure {
 .content__link {
   color: inherit;
   outline-offset: 1px;
+}
+
+.content__link:focus {
+  outline: 1px solid var(--text-color);
+}
+
+.content__link:hover {
+  text-decoration-color: var(--text-color-transparent);
 }
 
 .content__blockquote {
@@ -173,5 +182,61 @@ figure {
   position: absolute;
   right: -4px;
   bottom: 0.3ch;
+  z-index: -1;
+}
+
+.header__theme-toggler {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--text-color);
+  border-top: 1px solid var(--text-color);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header__theme-button {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  color: var(--text-color);
+  font-size: 18px;
+  line-height: 104%;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header__theme-button:disabled {
+  pointer-events: none;
+}
+
+.header__theme-button:focus {
+  outline: 1px solid var(--text-color);
+}
+
+.header__theme-button:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--text-color-transparent);
+}
+
+.header__theme-button_is-active {
+  position: relative;
+  font-weight: 700;
+}
+
+.header__theme-button_is-active::after {
+  content: '';
+  background-color: var(--accent-color);
+  height: 0.5ch;
+  width: calc(100% + 6px);
+  position: absolute;
+  right: -3px;
+  bottom: 3px;
   z-index: -1;
 }
