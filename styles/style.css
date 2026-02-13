@@ -240,3 +240,14 @@ figure {
   bottom: 3px;
   z-index: -1;
 }
+
+.footer {
+  margin-top: 10%;
+  padding: 2.5%;
+  border-top: 1px solid var(--text-color);
+}
+
+.footer__copyright {
+  text-align: center;
+  font-size: 18px;
+}
